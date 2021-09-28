@@ -1,0 +1,15 @@
+#pip install pyautogui
+import pyautogui as pg
+
+#screenshot function
+def screenshot():
+    image=pg.screenshot()
+    print("screen shot taken")
+    print("what do you want to save it as?")
+    filename=input("Filename: ")
+    image.save(filename+".png")
+    ans=input("Do you want mr to show it? ")
+    if "yes" in ans:
+        os.startfile(filename+".png")
+    else:
+        print("never mind")
